@@ -3,6 +3,10 @@
 #+DATE: May 8, 2026
 #+PROPERTY: header-args :mkdirp t
 
+[[https://img.shields.io/badge/license-MIT-blue.svg]]
+[[https://img.shields.io/badge/babashka-%E2%9A%9B-green.svg]]
+[[https://img.shields.io/badge/status-work_in_progress-orange.svg]]
+
 * Conference Information
 
 ** Event Details
