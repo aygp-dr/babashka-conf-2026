@@ -43,3 +43,19 @@ including CFP proposals, presentation materials, code examples, and research.
 - =research/= :: Background research and related materials
 - =code/= :: Code examples and live demonstrations
 - =docs/= :: Conference information and schedules
+
+* Development & Contribution
+
+** Tools & Environment
+We are building this presentation using the following stack:
+- *Runtime*: Babashka & JVM
+- *Language*: Clojure
+- *Editor*: Emacs (Org-mode)
+- *System*: FreeBSD 14.3-RELEASE (~amd64~)
+
+** CFP Proposals
+We are currently evaluating the following concepts for submission:
+1. [ ] /Babashka on the BSDs/ - System administration and scripting on FreeBSD
+2. [ ] /Parens all the way down/ - A pure Clojure/Babashka workflow
+3. [ ] /Interactive DevOps/ - REPL-driven infrastructure management
+
