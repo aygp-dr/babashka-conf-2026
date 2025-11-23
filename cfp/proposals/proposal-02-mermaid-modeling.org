@@ -1,0 +1,46 @@
+#+TITLE: Visualizing System Architecture with Babashka and Mermaid
+#+AUTHOR: Your Name
+#+DATE: 2025-11-23
+
+* Talk Abstract
+
+Explore how Babashka scripts can dynamically generate Mermaid diagrams to
+visualize system architectures, data flows, and deployment topologies. Learn
+techniques for turning infrastructure-as-code into visual documentation.
+
+* Key Points
+
+- Dynamic diagram generation from system metadata
+- Integrating Mermaid with Babashka workflows
+- Automating architecture documentation
+- Use cases: cloud infrastructure, microservices, data pipelines
+
+* Why This Matters
+
+Architecture diagrams often become outdated. Generate them from actual
+system state using Babashka to ensure documentation stays synchronized
+with reality.
+
+* Demo Ideas
+
+1. Query AWS/GCP resources and generate architecture diagram
+2. Parse Kubernetes manifests and create service mesh visualization
+3. Build dependency graphs from project files
+4. Create sequence diagrams from log analysis
+
+* Code Example
+
+#+begin_src clojure
+(ns mermaid-gen
+  (:require [babashka.process :as p]
+            [clojure.string :as str]))
+
+(defn k8s-to-mermaid
+  "Convert Kubernetes resources to Mermaid diagram"
+  [namespace]
+  (let [resources (-> (p/shell {:out :string}
+                               "kubectl get all -n" namespace)
+                      :out)]
+    ;; Parse and generate Mermaid syntax
+    ))
+#+end_src

@@ -1,0 +1,44 @@
+#+TITLE: Babashka Ecosystem Research
+#+DATE: 2025-11-23
+
+* Core Tools
+
+** Babashka
+- Fast-starting Clojure scripting runtime
+- Built with GraalVM native-image
+- Based on SCI (Small Clojure Interpreter)
+
+** Related Projects
+- clj-kondo: Clojure linter
+- SCI: Small Clojure Interpreter
+- cherry: ClojureScript compiler
+
+* Use Cases to Explore
+
+- [ ] DevOps automation
+- [ ] Data processing pipelines
+- [ ] AWS Lambda functions
+- [ ] CI/CD scripts
+- [ ] System administration
+- [ ] Web scraping
+- [ ] API testing
+- [ ] Database migrations
+
+* Community Examples
+
+Document interesting Babashka scripts from the community:
+
+** HTMX Integration
+- Reference: keychera/panas.example on GitHub
+- Use case: Server-side rendered web apps
+
+** Database Migrations
+- Common pattern for production systems
+- See Clojurians Slack discussions
+
+* Questions to Answer
+
+- How does Babashka compare to Bash for common DevOps tasks?
+- What are the performance characteristics?
+- What libraries work well with Babashka?
+- What are the limitations vs JVM Clojure?

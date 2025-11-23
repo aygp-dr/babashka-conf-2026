@@ -1,0 +1,45 @@
+#+TITLE: GraalVM Native Images: Lessons from Babashka
+#+AUTHOR: Your Name
+#+DATE: 2025-11-23
+
+* Talk Abstract
+
+Explore the technical details of how Babashka achieves instant startup and
+low memory usage through GraalVM native-image compilation. Discuss the
+trade-offs, challenges, and opportunities for applying similar techniques
+to your own projects.
+
+* Key Points
+
+- Native-image compilation basics
+- SCI (Small Clojure Interpreter) architecture
+- Balancing features vs binary size
+- Reflection and dynamic features in native images
+- Performance characteristics: startup vs runtime
+
+* Technical Content
+
+** Babashka Architecture
+#+begin_src mermaid
+graph TB
+    A[Clojure Code] --> B[SCI Interpreter]
+    B --> C[GraalVM Native Image]
+    C --> D[Fast Startup Binary]
+    
+    E[Standard Libraries] --> B
+    F[Built-in Pods] --> B
+#+end_src
+
+** Comparison Table
+| Metric              | JVM Clojure | Babashka | Improvement |
+|---------------------+-------------+----------+-------------|
+| Startup Time        | ~1-2s       | <10ms    | 100-200x    |
+| Memory (Idle)       | ~100MB      | ~20MB    | 5x          |
+| Binary Size         | N/A         | ~100MB   | Single file |
+
+* Real-world Examples
+
+- CI/CD scripts with minimal overhead
+- AWS Lambda cold starts
+- Container initialization
+- Command-line utilities

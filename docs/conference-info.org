@@ -1,0 +1,41 @@
+#+TITLE: Babashka Conf 2026 - Conference Information
+#+DATE: 2025-11-23
+
+* Conference Theme
+
+Exploring the Babashka ecosystem, use cases, and techniques while
+celebrating the community.
+
+* Topics of Interest
+
+Based on the first Babashka Conf in 2023:
+
+- Babashka use cases and techniques
+- DevOps and scripting applications
+- Industry experience reports
+- Software engineering practices
+- Data science applications
+- Community building and diversity
+- Adjacent Clojure topics
+
+* Timeline
+
+| Milestone           | Date       | Notes                        |
+|---------------------+------------+------------------------------|
+| CFP Opens           | Early 2026 | Watch conference website     |
+| CFP Closes          | TBD        | Submit early!                |
+| Speaker Notification| TBD        | Allow 2-4 weeks for review   |
+| Conference Date     | May 8 2026 | Friday afternoon             |
+
+* Previous Conference (2023)
+
+** Keynote
+- Michiel Borkent (creator of Babashka)
+
+** Talk Formats
+- Keynote: ~40 minutes
+- Regular talks: 20-30 minutes  
+- Workshop: 2 hours
+
+** Recording Policy
+- Talks recorded and published online (unless speaker opts out)

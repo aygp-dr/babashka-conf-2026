@@ -1,0 +1,41 @@
+#+TITLE: Babashka Conf 2026 - Amsterdam/Weesp
+#+AUTHOR: Your Name
+#+DATE: May 8, 2026
+#+PROPERTY: header-args :mkdirp t
+
+* Conference Information
+
+** Event Details
+- *Date*: Friday, May 8, 2026
+- *Time*: 1:00 PM to 5:00 PM CEST
+- *Location*: Amsterdam/Weesp area (TBD)
+- *Format*: In-person, free admission
+- *Capacity*: ~50 attendees
+
+** Important Links
+- Conference Website: https://babashka.org/conf/
+- Meetup Page: [Link to Meetup]
+- Contact: babashka.conf@gmail.com
+
+* Project Overview
+
+This repository contains materials for my Babashka Conf 2026 presentation,
+including CFP proposals, presentation materials, code examples, and research.
+
+* Status Tracker
+
+| Task                    | Status      | Due Date   | Notes |
+|-------------------------+-------------+------------+-------|
+| CFP Submission          | In Progress | Early 2026 |       |
+| Research Phase          | Ongoing     | Jan 2026   |       |
+| Demo Development        | Not Started | Mar 2026   |       |
+| Presentation Draft      | Not Started | Apr 2026   |       |
+| Final Preparation       | Not Started | May 2026   |       |
+
+* Repository Structure
+
+- =cfp/= :: Call for Papers proposals and templates
+- =presentation/= :: Slides, notes, and presentation assets
+- =research/= :: Background research and related materials
+- =code/= :: Code examples and live demonstrations
+- =docs/= :: Conference information and schedules

@@ -1,0 +1,51 @@
+#+TITLE: Building Real-time Data Pipelines with Babashka
+#+AUTHOR: Your Name
+#+DATE: 2025-11-23
+
+* Talk Abstract
+
+Demonstrate how Babashka's fast startup time and rich standard library
+make it ideal for building lightweight data processing pipelines. Cover
+streaming data, CSV processing, JSON transformation, and integration with
+databases.
+
+* Key Points
+
+- Stream processing patterns in Babashka
+- Working with CSV, JSON, and EDN data
+- Database integration (PostgreSQL, SQLite)
+- Error handling and retry strategies
+- Performance considerations vs JVM Clojure
+
+* Target Audience
+
+Data engineers, analysts, and developers working with ETL/ELT pipelines
+who want lightweight, fast-starting scripts.
+
+* Technical Deep Dive
+
+** CSV Processing
+#+begin_src clojure
+(require '[babashka.csv :as csv])
+(require '[clojure.java.io :as io])
+
+(defn process-large-csv
+  [input-file output-file transform-fn]
+  (with-open [reader (io/reader input-file)
+              writer (io/writer output-file)]
+    (->> (csv/read-csv reader)
+         (map transform-fn)
+         (csv/write-csv writer))))
+#+end_src
+
+** Data Flow Diagram
+#+begin_src mermaid
+graph TD
+    A[Data Source] --> B[Babashka Script]
+    B --> C{Transform}
+    C --> D[Filter]
+    D --> E[Enrich]
+    E --> F[Output]
+    F --> G[Database]
+    F --> H[File System]
+#+end_src

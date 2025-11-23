@@ -1,0 +1,59 @@
+#+TITLE: Literate DevOps with Babashka and Org-mode
+#+AUTHOR: Your Name
+#+DATE: 2025-11-23
+#+PROPERTY: header-args:clojure :tangle ../code/examples/literate-devops.bb :mkdirp t
+
+* Talk Abstract
+
+Demonstrate how Babashka combined with Emacs org-mode enables literate
+programming for DevOps tasks. Show how to create executable documentation
+that combines narrative explanation, code, and Mermaid diagrams in a single
+source file.
+
+* Key Points
+
+- Literate programming principles for infrastructure code
+- Using org-babel with Babashka for reproducible scripts
+- Integrating Mermaid diagrams for system visualization
+- Real-world examples: deployment pipelines, monitoring scripts
+
+* Target Audience
+
+DevOps engineers, SREs, and developers interested in documentation-as-code
+and reproducible infrastructure management.
+
+* Outline (20-30 minutes)
+
+1. Introduction to literate programming (3 min)
+2. Org-mode + Babel setup (5 min)
+3. Live demo: Building a deployment script (10 min)
+4. Mermaid integration for system modeling (5 min)
+5. Best practices and tips (5 min)
+6. Q&A (2 min)
+
+* Demo Code
+
+#+begin_src clojure
+#!/usr/bin/env bb
+
+(require '[babashka.process :as p])
+(require '[clojure.string :as str])
+
+(defn deploy-service
+  "Deploy a service with literate documentation"
+  [service-name env]
+  (println (str "Deploying " service-name " to " env))
+  ;; Demo implementation
+  )
+#+end_src
+
+* System Diagram
+
+#+begin_src mermaid :file ../presentation/assets/diagrams/deployment-flow.png
+graph LR
+    A[Source Code] --> B[Org-mode Document]
+    B --> C[Tangle Code]
+    B --> D[Generate Docs]
+    C --> E[Execute Script]
+    D --> F[HTML/PDF Output]
+#+end_src

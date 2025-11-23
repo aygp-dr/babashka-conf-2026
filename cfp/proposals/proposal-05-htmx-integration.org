@@ -1,0 +1,75 @@
+#+TITLE: Modern Web Development: Babashka + HTMX for Hypermedia Applications
+#+AUTHOR: Your Name
+#+DATE: 2025-11-23
+
+* Talk Abstract
+
+Build modern, interactive web applications using Babashka as a backend with
+HTMX for dynamic frontend interactions. Explore how this combination provides
+a lightweight alternative to heavy JavaScript frameworks while maintaining
+rich interactivity.
+
+* Key Points
+
+- Hypermedia-driven application architecture
+- Server-side rendering with Hiccup
+- HTMX patterns: lazy loading, infinite scroll, modals
+- WebSocket integration for real-time updates
+- Deployment as a single binary
+
+* Why This Approach
+
+- Minimal JavaScript complexity
+- Fast development iteration
+- Single-file deployment
+- Excellent for internal tools, dashboards, and admin interfaces
+
+* Architecture Diagram
+
+#+begin_src mermaid
+sequenceDiagram
+    participant Browser
+    participant HTMX
+    participant Babashka
+    participant Database
+    
+    Browser->>HTMX: User Action
+    HTMX->>Babashka: HTTP Request
+    Babashka->>Database: Query Data
+    Database-->>Babashka: Results
+    Babashka-->>HTMX: HTML Fragment
+    HTMX-->>Browser: Update DOM
+#+end_src
+
+* Demo Application
+
+Build a task management app:
+
+#+begin_src clojure :tangle ../code/examples/htmx-demo.bb
+#!/usr/bin/env bb
+
+(require '[org.httpkit.server :as server])
+(require '[hiccup.core :as h])
+
+(defn render-tasks [tasks]
+  (h/html
+   [:div#task-list
+    (for [task tasks]
+      [:div.task
+       [:span (:title task)]
+       [:button {:hx-delete (str "/tasks/" (:id task))
+                 :hx-target "#task-list"
+                 :hx-swap "outerHTML"}
+        "Delete"]])]))
+
+(defn handler [req]
+  ;; Route handling
+  )
+
+(server/run-server handler {:port 8080})
+#+end_src
+
+* Target Audience
+
+Full-stack developers interested in simpler web architectures and those
+building internal tools or MVPs.

@@ -1,0 +1,21 @@
+# Tangled code (will be regenerated)
+*.bb
+!code/examples/*.bb
+
+# Temporary files
+*.tmp
+*~
+.#*
+
+# Build artifacts
+*.elc
+*.html
+*.pdf
+
+# IDE files
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
